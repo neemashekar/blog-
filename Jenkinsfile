@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('testing trigger') {
       steps {
         echo 'Trigger works!'
       }
