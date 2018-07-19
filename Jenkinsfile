@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('testing trigger') {
       steps {
-        echo 'Trigger works!'
+        sh 'mvn clean package -DskipTests'
       }
     }
   }
