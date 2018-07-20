@@ -2,17 +2,13 @@ pipeline {
   agent any
   stages {
     stage('MVN Build') {
-      parallel {
-        stage('MVN Build') {
-          steps {
-            sh 'mvn clean package -DskipTests'
-          }
-        }
-        stage('Tomcat') {
-          steps {
-            sh 'sudo service tomcat start'
-          }
-        }
+      steps {
+        sh 'mvn clean package -DskipTests'
+      }
+    }
+    stage('Tomcat') {
+      steps {
+        sh 'sudo service tomcat start'
       }
     }
     stage('deploy') {
