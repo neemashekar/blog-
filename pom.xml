@@ -125,6 +125,8 @@
                   <server>localhost</server>
                   <path>/myapp</path>
                   <update>true</update>
+                  <username>maven</username>
+                  <password>deploy</password>
               </configuration>
           </plugin>
       </plugins>
