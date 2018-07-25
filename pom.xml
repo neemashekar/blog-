@@ -127,7 +127,6 @@
                   <update>true</update>
               </configuration>
           </plugin>
-          <plugin>
       </plugins>
     </pluginManagement>
   </build>
