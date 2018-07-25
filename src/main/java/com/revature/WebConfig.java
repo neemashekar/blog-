@@ -56,7 +56,7 @@ public class WebConfig extends WebMvcConfigurerAdapter{
         props.put("hibernate.dialect", env.getProperty("db.dialect"));
 
         factoryBean.setHibernateProperties(props);
-        factoryBean.setPackagesToScan("com.revature.model");
+        factoryBean.setPackagesToScan("com.revature.models");
 
         return factoryBean;
     }

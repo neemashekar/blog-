@@ -6,30 +6,17 @@ import javax.persistence.*;
 @Table(name="posts", schema="public")
 
 public class Post {
-    @Column(name="user_id")
-    private Integer userId;
-    @Column
+
     private String body;
-    @Id
-    @Column
+
     private Integer id;
 
-
-    @ManyToOne
-    @JoinColumn(name="userId")
     private User user;
 
     public Post() {
     }
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
+    @Column(name = "body")
     public String getBody() {
         return body;
     }
@@ -38,6 +25,8 @@ public class Post {
         this.body = body;
     }
 
+    @Id
+    @Column(name="id")
     public Integer getId() {
         return id;
     }
@@ -46,6 +35,7 @@ public class Post {
         this.id = id;
     }
 
+    @ManyToOne
     public User getUser() {
         return user;
     }
@@ -57,8 +47,7 @@ public class Post {
     @Override
     public String toString() {
         return "Post{" +
-                "userId=" + userId +
-                ", body='" + body + '\'' +
+                "body='" + body + '\'' +
                 ", id=" + id +
                 ", user=" + user +
                 '}';
