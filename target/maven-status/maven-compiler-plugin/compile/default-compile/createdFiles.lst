@@ -1,0 +1,9 @@
+com\revature\models\User.class
+com\revature\WebInitializer.class
+com\revature\models\Post.class
+com\revature\controllers\UserController.class
+com\revature\data\BaseDao.class
+com\revature\data\UserDaoImpl.class
+com\revature\WebConfig.class
+com\revature\services\UserService.class
+com\revature\data\UserDao.class
