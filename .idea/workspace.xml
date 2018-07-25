@@ -6,12 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d014fc3-36bc-4e58-996d-3f9f153e872b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project2/index.jsp" beforeDir="false" />
-    </list>
+    <list default="true" id="1d014fc3-36bc-4e58-996d-3f9f153e872b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/WebConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +41,8 @@
       <file leaf-file-name="post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="158" column="12" lean-forward="true" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+            <state relative-caret-position="17">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
@@ -187,8 +182,8 @@
       <path value="$PROJECT_DIR$/src/main/webapp/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -294,7 +289,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/SpringBootDemo/demo" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -442,12 +437,12 @@
       <updated>1532483795791</updated>
       <workItem from="1532490076608" duration="8521000" />
       <workItem from="1532525170110" duration="674000" />
-      <workItem from="1532526423846" duration="725000" />
+      <workItem from="1532526423846" duration="1141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9920000" />
+    <option name="totallyTimeSpent" value="10336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -863,7 +858,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -872,8 +867,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="158" column="12" lean-forward="true" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+        <state relative-caret-position="17">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
