@@ -15,14 +15,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/users")
 @ResponseBody
 public class UserController {
-    UserService us;
+    UserService userService;
+
     @Autowired
-    public void setUs(UserService us) {
-        this.us = us;
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
+
     @GetMapping(path="/show", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> getUser(){
-        User user= us.findUser("neema");
+        User user= userService.findUser("neema");
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }

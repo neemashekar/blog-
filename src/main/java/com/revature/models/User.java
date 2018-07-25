@@ -3,12 +3,11 @@ package com.revature.models;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name="users", schema="public")
+@Entity (name="USERS")
 public class User {
-    @Column(nullable=false, unique=true)
+    @Column(name= "username", nullable=false, unique=true)
     private String username;
-    @Column(nullable=false)
+    @Column(name= "password", nullable=false)
     private String password;
     @Id
     private Integer id;

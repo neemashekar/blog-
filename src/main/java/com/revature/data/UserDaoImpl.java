@@ -21,7 +21,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByUsername(String username) {
-        String hql = "from User Where username =:u";
+        String hql = "from User where User.username = :u";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setParameter("u",username);
         return (User)query.uniqueResult();
