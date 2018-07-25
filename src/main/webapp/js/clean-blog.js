@@ -37,5 +37,10 @@
         this.previousTop = currentTop;
       });
   }
-
 })(jQuery); // End of use strict
+
+// Ruth & Neema's Code
+document.getElementsByClassName("fill_with_username").onload( function () {
+
+    }
+)
