@@ -40,9 +40,4 @@
 })(jQuery); // End of use strict
 
 // Ruth & Neema's Code
-document.getElementsByClassName("fill_with_username").onload( function () {
-        var http = new XMLHttpRequest();
-        var params = 'id='
-        http.open()
-    }
-)
+

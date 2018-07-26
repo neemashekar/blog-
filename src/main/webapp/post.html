@@ -65,7 +65,7 @@
               <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
               <span class="meta">Posted by
                 <!--TODO: grab user-->
-                <a class="fill_with_username" href="#">Start Bootstrap</a>
+                <a id="fill_with_username" href="#">Start Bootstrap</a>
                 <!--TODO: grab date-->
                 on August 24, 2018</span>
             </div>
@@ -79,7 +79,7 @@
       <div class="container">
         <div class="row">
           <!--TODO: grab content/format it-->
-          <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="col-lg-8 col-md-10 mx-auto" id="fill_with_post_body">
 
             <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
@@ -168,6 +168,25 @@
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
 
+    <script>
+    function onPostLoad() {
+        console.log("this is running");
+        var http = new XMLHttpRequest();
+        http.open('GET', 'api/posts/id/1', true);
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        http.send();
+        http.onreadystatechange = function (ev) {
+            if(http.readyState == 4 && http.status ==200) {
+                var post = JSON.parse(http.responseText);
+                var user = post.user;
+                document.querySelector("#fill_with_username").innerText = user.username;
+                document.querySelector("#fill_with_post_body").innerText = post.body;
+            }
+        }
+    }
+
+    onPostLoad();
+    </script>
   </body>
 
 </html>
