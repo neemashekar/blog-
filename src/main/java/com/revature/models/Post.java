@@ -4,7 +4,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="posts", schema="public")
-
 public class Post {
 
     private String body;
