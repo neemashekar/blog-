@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -22,9 +23,15 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping(path="/show", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path="/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> getUser(){
         User user= userService.findUser("neema");
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+    @GetMapping(path="/id={id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<User> getUser(@PathVariable int id){
+        User user= userService.find(id);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }

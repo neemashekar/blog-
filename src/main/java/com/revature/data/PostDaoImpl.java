@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 
 @Repository
 public class PostDaoImpl implements PostDao{
@@ -35,5 +36,12 @@ public class PostDaoImpl implements PostDao{
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setParameter("idNum", id);
         return (Post)query.uniqueResult();
+    }
+
+    public List<Post> all(int userId){
+        String hql = "FROM Post p WHERE p.user.id = :userId";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        query.setParameter("userId", userId);
+        return (List<Post>)query.list();
     }
 }

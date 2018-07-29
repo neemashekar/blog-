@@ -42,6 +42,9 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User find(Serializable id) {
-        return null;
+        String hql = "FROM User U WHERE U.id = :id";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        query.setParameter("id",id);
+        return (User)query.uniqueResult();
     }
 }

@@ -24,4 +24,9 @@ public class UserService {
         user = ((UserDao)userDao).findByUsername(username);
         return user;
     }
+
+    @Transactional
+    public User find(int id){
+        return userDao.find(id);
+    }
 }
