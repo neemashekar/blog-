@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title class="fill_with_username">username</title>
+    <title>Blog-</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -146,6 +146,7 @@
                     });
                     document.querySelector("#title").innerText = post.title;
                     document.querySelector("#fill_with_post_body").innerText = post.body;
+                    document.querySelector("title").innerText = user.username + ":" + post.title;
                 }
             }
         }
