@@ -25,4 +25,8 @@ public class UserService {
         return user;
     }
 
+    @Transactional
+    public User find(int id){
+        return userDao.find(id);
+    }
 }

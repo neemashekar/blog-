@@ -4,10 +4,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="posts", schema="public")
-
 public class Post {
 
     private String body;
+
+    private String title;
 
     private Integer id;
 
@@ -23,6 +24,15 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    @Column(name = "title")
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Id
