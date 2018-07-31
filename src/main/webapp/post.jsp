@@ -1,6 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<%--
+  Created by IntelliJ IDEA.
+  User: angel
+  Date: 7/30/2018
+  Time: 7:05 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
 
     <meta charset="utf-8">
@@ -8,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title class="fill_with_username">username</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +48,7 @@
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="notpost.html">Create New Post</a>
+                    <a class="nav-link" href="new.html">Create New Post</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -53,31 +59,37 @@
 </nav>
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('img/new-post-bg.jpg')">
+<header class="masthead" style="background-image: url('img/post-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h1>New Post</h1>
-                    <span>Fill in the form to create a new blog post</span>
+                <div class="post-heading">
+                    <h1 class = "title" id="${post.title}">${post.title}</h1>
+                    <!--TODO: subheading-->
+                    <!--<h2 id = "subtitle" class="subheading">Problems look mighty small from 150 miles up</h2>-->
+                    <span class="meta">Posted by
+                        <!--TODO: grab user-->
+                <a class="fill_with_username" href="#">${post.user.username}</a>
+                        <!--TODO: grab date-->
+                on August 24, 2018</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <form id = "new_post_form" class="col-lg-8 col-md-10 mx-auto">
-            Title: <input type="text" >
-            Subtitle: <input type="text">
-            Post: <textarea rows="10"></textarea>
-            <input type="submit" value="Submit">
-        </form>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!--TODO: grab content/format it-->
+            <div class="col-lg-8 col-md-10 mx-auto" id="fill_with_post_body">
+                ${post.body}
+            </div>
+        </div>
     </div>
-</div>
+</article>
 
 <hr>
 
@@ -118,13 +130,5 @@
     </div>
 </footer>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom scripts for this template -->
-<script src="js/clean-blog.min.js"></script>
-
 </body>
-
 </html>

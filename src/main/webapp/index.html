@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title>Shameless Blog</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -149,7 +149,7 @@
                         preview.setAttribute("class","post-preview");
 
                         var link = document.createElement("a");
-                        link.setAttribute("href","post.html");
+                        link.setAttribute("href","api/posts/id/" + el.id);
                         var title = document.createElement("h2");
                         title.innerText = el.title;
                         link.appendChild(title);
@@ -164,6 +164,7 @@
 
                         preview.appendChild(paragraph);
 
+                        preview.id = el.id;
                         window.appendChild(preview);
                         window.appendChild(document.createElement("hr"));
                     });
