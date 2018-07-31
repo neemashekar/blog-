@@ -1,11 +1,12 @@
-<<<<<<< HEAD
-<!doctype html>
-<html lang="en">
-=======
-<!DOCTYPE html>
-<html lang="en">
-
->>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922
+<%--
+  Created by IntelliJ IDEA.
+  User: angel
+  Date: 7/30/2018
+  Time: 7:05 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
 
     <meta charset="utf-8">
@@ -13,11 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-<<<<<<< HEAD
-    <title>Create New Post</title>
-=======
-    <title>Clean Blog</title>
->>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922
+    <title class="fill_with_username">username</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,11 +48,7 @@
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                    <a class="nav-link" href="post.html">Create New Post</a>
-=======
-                    <a class="nav-link" href="notpost.html">Create New Post</a>
->>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922
+                    <a class="nav-link" href="new.html">Create New Post</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -66,51 +59,37 @@
 </nav>
 
 <!-- Page Header -->
-<<<<<<< HEAD
-<header class="masthead" style="background-image: url('img/home-bg.jpg')">
-=======
-<header class="masthead" style="background-image: url('img/new-post-bg.jpg')">
->>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922
+<header class="masthead" style="background-image: url('img/post-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="site-heading">
-<<<<<<< HEAD
-                    <h1 class="fill_with_username">Username</h1>
-                    <span class="subheading">A Personalizable Blog</span>
-=======
-                    <h1>New Post</h1>
-                    <span>Fill in the form to create a new blog post</span>
->>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922
+                <div class="post-heading">
+                    <h1 class = "title" id="${post.title}">${post.title}</h1>
+                    <!--TODO: subheading-->
+                    <!--<h2 id = "subtitle" class="subheading">Problems look mighty small from 150 miles up</h2>-->
+                    <span class="meta">Posted by
+                        <!--TODO: grab user-->
+                <a class="fill_with_username" href="#">${post.user.username}</a>
+                        <!--TODO: grab date-->
+                on August 24, 2018</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-<<<<<<< HEAD
-        <div id = "post-preview-window" class="col-lg-8 col-md-10 mx-auto">
-            <!-- Pager -->
-            <form class="clearfix">
-                Title: <input type="text" name='title'>
-                Subtitle: <input type="text" name ='subtitle'>
-            </form>
-            <hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!--TODO: grab content/format it-->
+            <div class="col-lg-8 col-md-10 mx-auto" id="fill_with_post_body">
+                ${post.body}
+            </div>
         </div>
-=======
-        <form id = "new_post_form" class="col-lg-8 col-md-10 mx-auto">
-            Title: <input type="text" >
-            Subtitle: <input type="text">
-            Post: <textarea rows="10"></textarea>
-            <input type="submit" value="Submit">
-        </form>
->>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922
     </div>
-</div>
+</article>
 
 <hr>
 
@@ -151,18 +130,5 @@
     </div>
 </footer>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom scripts for this template -->
-<script src="js/clean-blog.min.js"></script>
-<<<<<<< HEAD
 </body>
 </html>
-=======
-
-</body>
-
-</html>
->>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922

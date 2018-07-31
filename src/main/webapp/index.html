@@ -8,7 +8,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+<<<<<<< HEAD
     <title>Blog-</title>
+=======
+    <title>Shameless Blog</title>
+>>>>>>> 5d6d33e1960d38124d371833f5af573a2e1fd922
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +46,7 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Create New Post</a>
+              <a class="nav-link" href="new.html">Create New Post</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -149,7 +153,7 @@
                         preview.setAttribute("class","post-preview");
 
                         var link = document.createElement("a");
-                        link.setAttribute("href","post.html");
+                        link.setAttribute("href","api/posts/id/" + el.id);
                         var title = document.createElement("h2");
                         title.innerText = el.title;
                         link.appendChild(title);
@@ -164,6 +168,7 @@
 
                         preview.appendChild(paragraph);
 
+                        preview.id = el.id;
                         window.appendChild(preview);
                         window.appendChild(document.createElement("hr"));
                     });

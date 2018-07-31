@@ -42,7 +42,7 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Sample Post</a>
+              <a class="nav-link" href="new.html">Create New Post</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -133,13 +133,14 @@
         function onPostLoad() {
             console.log("running onPostLoad function");
             var http = new XMLHttpRequest();
-            http.open('GET', 'api/posts/id/3', true);
+            http.open('GET', 'api/posts/id=3', true);
             http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
             http.send();
             http.onreadystatechange = function (ev) {
                 if(http.readyState == 4 && http.status ==200) {
                     var post = JSON.parse(http.responseText);
                     var user = post.user;
+                    document.post = post;
                     var elemToInsertUsername = document.getElementsByClassName("fill_with_username");
                     [].forEach.call(elemToInsertUsername, function(el){
                         el.innerText = user.username;
